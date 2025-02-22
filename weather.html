@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather App</title>
+<style>
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#location {
+    margin-bottom: 10px;
+}
+
+#weather-info {
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Weather App</h1>
+  <input type="text" id="location" placeholder="Enter city name">
+  <button onclick="getWeather()">Get Weather</button>
+
+  <div id="weather-info">
+    </div>
+</div>
+
+<script>
+function getWeather() {
+  const location = document.getElementById('location').value;
+  const apiKey = '24f35048331ae83b69492b1fbaaeeacc'; // It will Work For Mumbai, Delhi & Pune Because of Api Restraction so you can add your api key to get more data
+
+  if (!location) {
+    alert("Please enter a city name.");
+    return;
+  }
+
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`; // Use metric for Celsius
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);  
+      }
+      return response.json();
+    })
+    .then(data => {
+      const temperature = data.main.temp;
+      const description = data.weather[0].description;
+      const weatherIcon = data.weather[0].icon;  // Get icon code
+      const city = data.name;
+      const country = data.sys.country;
+
+      // For rain probability (using 3-hour forecast, if available):
+      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=metric`;
+
+      fetch(forecastUrl)
+        .then(forecastResponse => {
+            if (!forecastResponse.ok) {
+                throw new Error(`HTTP error! status: ${forecastResponse.status}`);
+            }
+            return forecastResponse.json();
+        })
+        .then(forecastData => {
+            let rainProbability = 0;
+            if (forecastData.list && forecastData.list.length > 0) {
+              for (let i = 0; i < forecastData.list.length; i++) {
+                const forecast = forecastData.list[i];
+                if (forecast.weather[0].main === "Rain") {
+                  rainProbability = 80; // Example: if "Rain" in forecast, set to 80% (adjust as needed)
+                  break; // Stop checking after finding rain in forecast
+                }
+              }
+            }
+
+            displayWeather(city, country, temperature, description, rainProbability, weatherIcon);
+        })
+        .catch(error => {
+            console.error("Error fetching forecast:", error);
+            displayWeather(city, country, temperature, description, 0, weatherIcon); 
+        });
+
+
+    })
+    .catch(error => {
+      console.error("Error fetching weather data:", error);
+      document.getElementById('weather-info').innerHTML = "Error fetching weather data. Please check the city name and API key.";
+    });
+}
+
+
+function displayWeather(city, country, temperature, description, rainProbability, weatherIcon) {
+    const weatherInfoDiv = document.getElementById('weather-info');
+    const iconUrl = `http://openweathermap.org/img/w/${weatherIcon}.png`; 
+
+    weatherInfoDiv.innerHTML = `
+        <h2>${city}, ${country}</h2>
+        <img src="${iconUrl}" alt="Weather Icon"> <br>
+        <p>Temperature: ${temperature}°C</p>
+        <p>Description: ${description}</p>
+        <p>Rain Probability: ${rainProbability}%</p>
+    `;
+}
+
+</script>
+
+</body>
+</html>
