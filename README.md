@@ -14,7 +14,7 @@ This is a simple weather application built using JavaScript, HTML, and CSS. It f
 ## How to Use
 
 1.  **Get an API Key:** You will need an API key from OpenWeatherMap (openweathermap.org). Sign up for a free account to obtain one.  This is *essential* for the app to function.
-2.  **Replace Placeholder:** Open the `index.html` file (or whatever you named the HTML file) in a text editor.  Find the line `const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';` and replace `'YOUR_OPENWEATHERMAP_API_KEY'` with your actual API key.
+2.  **Replace Placeholder:** Open the `index.html` file (or whatever you named the HTML file) in a text editor.  Find the line `const apiKey = '24f35048331ae83b69492b1fbaaeeacc';` and replace `'24f35048331ae83b69492b1fbaaeeacc'` with your actual API key.
 3.  **Enter Location:**  Open the `index.html` file in your web browser. Type the desired city name into the input field and click the "Get Weather" button.
 
 **Important:** The current version of the code *requires you to use your own API key*.  The example code previously only demonstrated how to get weather for a hardcoded set of cities.  Using your API key allows you to get weather information for *any* location supported by OpenWeatherMap.
