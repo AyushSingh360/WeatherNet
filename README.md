@@ -11,7 +11,7 @@ This is a simple weather application built using JavaScript, HTML, and CSS. It f
 *   Gives a *very basic* estimated rain probability (note: this is a simplified estimate based on a short-term forecast and is not a highly accurate prediction).
 *   Displays a weather icon.
 
-## How to Use
+## How to Use this program
 
 1.  **Get an API Key:** You will need an API key from OpenWeatherMap (openweathermap.org). Sign up for a free account to obtain one.  This is *essential* for the app to function.
 2.  **Replace Placeholder:** Open the `index.html` file (or whatever you named the HTML file) in a text editor.  Find the line `const apiKey = '24f35048331ae83b69492b1fbaaeeacc';` and replace `'24f35048331ae83b69492b1fbaaeeacc'` with your actual API key.
