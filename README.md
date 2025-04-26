@@ -29,7 +29,7 @@ It fetches real-time weather and forecast data using the **OpenWeather API**.
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/AyushSingh360/Basic-Weather-Program->
    cd vibrant-weather
    ```
 
@@ -45,11 +45,12 @@ It fetches real-time weather and forecast data using the **OpenWeather API**.
 3. **Configure Environment Variables:**
 
    Create a file named `.env.local` in the project root, and add:
+   please use your own Openweater Api key 
    ```dotenv
    OPENWEATHERMAP_API_KEY=24f35048331ae83b69492b1fbaaeeacc
    ```
 
-4. **Run the development server:**
+5. **Run the development server:**
    ```bash
    npm run dev
    ```
