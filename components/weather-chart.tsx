@@ -1,0 +1,126 @@
+"use client"
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from "recharts"
+import { TrendingUp } from "lucide-react"
+import { formatTime } from "@/lib/utils"
+import type { ForecastData } from "@/types/weather"
+
+interface WeatherChartProps {
+  forecast: ForecastData[]
+}
+
+export function WeatherChart({ forecast }: WeatherChartProps) {
+  const chartData = forecast.slice(0, 8).map(item => ({
+    time: formatTime(item.dt),
+    temp: Math.round(item.main.temp),
+    humidity: item.main.humidity,
+    pressure: item.main.pressure,
+  }))
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/20 border-white/20 shadow-xl animate-slide-up">
+        <CardHeader>
+          <CardTitle className="text-white flex items-center gap-2">
+            <TrendingUp className="h-5 w-5" />
+            Temperature Trend
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ResponsiveContainer width="100%" height={200}>
+            <AreaChart data={chartData}>
+              <defs>
+                <linearGradient id="tempGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#f59e0b" stopOpacity={0.8}/>
+                  <stop offset="95%" stopColor="#f59e0b" stopOpacity={0.1}/>
+                </linearGradient>
+              </defs>
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+              <XAxis 
+                dataKey="time" 
+                stroke="rgba(255,255,255,0.7)"
+                fontSize={12}
+              />
+              <YAxis 
+                stroke="rgba(255,255,255,0.7)"
+                fontSize={12}
+              />
+              <Tooltip 
+                contentStyle={{
+                  backgroundColor: 'rgba(0,0,0,0.8)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '8px',
+                  color: 'white'
+                }}
+              />
+              <Area
+                type="monotone"
+                dataKey="temp"
+                stroke="#f59e0b"
+                strokeWidth={2}
+                fill="url(#tempGradient)"
+              />
+            </AreaChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
+
+      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/20 border-white/20 shadow-xl animate-slide-up delay-100">
+        <CardHeader>
+          <CardTitle className="text-white flex items-center gap-2">
+            <TrendingUp className="h-5 w-5" />
+            Humidity & Pressure
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ResponsiveContainer width="100%" height={200}>
+            <LineChart data={chartData}>
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+              <XAxis 
+                dataKey="time" 
+                stroke="rgba(255,255,255,0.7)"
+                fontSize={12}
+              />
+              <YAxis 
+                yAxisId="humidity"
+                stroke="rgba(255,255,255,0.7)"
+                fontSize={12}
+              />
+              <YAxis 
+                yAxisId="pressure"
+                orientation="right"
+                stroke="rgba(255,255,255,0.7)"
+                fontSize={12}
+              />
+              <Tooltip 
+                contentStyle={{
+                  backgroundColor: 'rgba(0,0,0,0.8)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '8px',
+                  color: 'white'
+                }}
+              />
+              <Line
+                yAxisId="humidity"
+                type="monotone"
+                dataKey="humidity"
+                stroke="#3b82f6"
+                strokeWidth={2}
+                dot={{ fill: '#3b82f6', strokeWidth: 2, r: 4 }}
+              />
+              <Line
+                yAxisId="pressure"
+                type="monotone"
+                dataKey="pressure"
+                stroke="#10b981"
+                strokeWidth={2}
+                dot={{ fill: '#10b981', strokeWidth: 2, r: 4 }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}

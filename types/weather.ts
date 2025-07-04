@@ -30,6 +30,10 @@ export interface CurrentWeather {
     all: number
   }
   visibility: number
+  coord: {
+    lat: number
+    lon: number
+  }
 }
 
 export interface ForecastData {
