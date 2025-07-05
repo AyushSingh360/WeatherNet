@@ -1,41 +1,6 @@
 import type { Config } from "tailwindcss"
-// tailwind.config.ts
-import type { Config } from "tailwindcss"
 
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {
-      keyframes: {
-        "slide-in-from-top-full": {
-          from: { transform: "translateY(-100%)", opacity: "0" },
-          to: { transform: "translateY(0)", opacity: "1" },
-        },
-        "slide-in-from-bottom-full": {
-          from: { transform: "translateY(100%)", opacity: "0" },
-          to: { transform: "translateY(0)", opacity: "1" },
-        },
-        "slide-out-to-right-full": {
-          to: { transform: "translateX(100%)", opacity: "0" },
-        },
-        "fade-out": {
-          to: { opacity: "0" },
-        },
-      },
-      animation: {
-        "in-top": "slide-in-from-top-full 0.3s ease-out",
-        "in-bottom": "slide-in-from-bottom-full 0.3s ease-out",
-        "out-right": "slide-out-to-right-full 0.2s ease-in forwards",
-        "fade-out": "fade-out 0.2s ease-in",
-      },
-    },
-  },
-  plugins: [],
-}
-
-export default config
-
-const config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -95,6 +60,20 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "slide-in-from-top-full": {
+          from: { transform: "translateY(-100%)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
+        "slide-in-from-bottom-full": {
+          from: { transform: "translateY(100%)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
+        "slide-out-to-right-full": {
+          to: { transform: "translateX(100%)", opacity: "0" },
+        },
+        "fade-out": {
+          to: { opacity: "0" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -105,12 +84,16 @@ const config = {
         },
       },
       animation: {
+        "in-top": "slide-in-from-top-full 0.3s ease-out",
+        "in-bottom": "slide-in-from-bottom-full 0.3s ease-out",
+        "out-right": "slide-out-to-right-full 0.2s ease-in forwards",
+        "fade-out": "fade-out 0.2s ease-in",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+}
 
 export default config
