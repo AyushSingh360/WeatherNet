@@ -6,6 +6,18 @@
 
 ---
 
+## ⚖️ License & Copyright
+
+**© 2025 Ayush Singh. All rights reserved.**
+
+This is proprietary software owned exclusively by Ayush Singh. No part of this software may be used, copied, modified, distributed, or otherwise utilized without explicit written permission from the copyright holder.
+
+**🚫 UNAUTHORIZED USE IS STRICTLY PROHIBITED**
+
+For licensing inquiries, contact: ayush.singh.dev@example.com
+
+---
+
 ## ✨ Features
 
 ### 🌍 Core Weather Features
@@ -58,19 +70,25 @@
 
 ## 🛠️ Installation & Setup
 
+**⚠️ IMPORTANT: This software is proprietary and requires permission from Ayush Singh before use.**
+
 ### Prerequisites
 - Node.js 18+ installed
 - OpenWeatherMap API key (free at [openweathermap.org](https://openweathermap.org/api))
+- **Written permission from Ayush Singh**
 
-### Quick Start
+### Quick Start (Authorized Users Only)
 
-1. **Clone the repository:**
+1. **Obtain Permission:**
+   Contact ayush.singh.dev@example.com for licensing
+
+2. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/weathernet.git
+   git clone https://github.com/AyushSingh360/weathernet.git
    cd weathernet
    ```
 
-2. **Install dependencies:**
+3. **Install dependencies:**
    ```bash
    npm install
    # or
@@ -79,7 +97,7 @@
    yarn install
    ```
 
-3. **Configure Environment Variables:**
+4. **Configure Environment Variables:**
    
    Create `.env.local` in the project root:
    ```env
@@ -88,7 +106,7 @@
    
    > 🔑 **Get your free API key:** Visit [OpenWeatherMap](https://openweathermap.org/api) and sign up for a free account.
 
-4. **Run the development server:**
+5. **Run the development server:**
    ```bash
    npm run dev
    ```
@@ -201,6 +219,8 @@ weathernet/
 
 ## 🔧 Customization
 
+**⚠️ Note: Customization requires permission from Ayush Singh**
+
 ### Themes
 Modify `app/globals.css` to customize the monochrome theme:
 ```css
@@ -220,41 +240,35 @@ The WeatherNet logo combines a cloud icon with a lightning bolt and can be custo
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect your repository to [Vercel](https://vercel.com)
-3. Add your `OPENWEATHERMAP_API_KEY` in environment variables
-4. Deploy with one click!
+**⚠️ Deployment requires explicit permission from Ayush Singh**
 
-### Other Platforms
-- **Netlify**: Build command `npm run build`, publish directory `out`
-- **Railway**: Automatic deployment from GitHub
-- **Docker**: Use the included Dockerfile for containerization
+### Authorized Deployment Options
+1. Contact ayush.singh.dev@example.com for deployment authorization
+2. Obtain written permission for production use
+3. Follow standard deployment procedures only after authorization
 
 ---
 
-## 🤝 Contributing
+## 🚫 Contributing
 
-We welcome contributions! Here's how you can help:
+**This is proprietary software. Contributions are not accepted without explicit permission from Ayush Singh.**
 
-1. **Fork the repository**
-2. **Create a feature branch:** `git checkout -b feature/amazing-feature`
-3. **Commit your changes:** `git commit -m 'Add amazing feature'`
-4. **Push to the branch:** `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
-
-### Development Guidelines
-- Follow TypeScript best practices
-- Maintain responsive design principles
-- Keep the monochrome design consistent
-- Add animations for new components
-- Update documentation for new features
+To request permission to contribute:
+1. Contact ayush.singh.dev@example.com
+2. Provide detailed information about proposed contributions
+3. Wait for written authorization before proceeding
 
 ---
 
 ## 📝 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+**PROPRIETARY SOFTWARE - ALL RIGHTS RESERVED**
+
+Copyright (c) 2025 Ayush Singh. All rights reserved.
+
+This software is protected by copyright law. Unauthorized use, reproduction, or distribution is strictly prohibited and may result in severe civil and criminal penalties.
+
+See the [LICENSE](LICENSE) file for complete terms and conditions.
 
 ---
 
@@ -268,40 +282,32 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## 📞 Support
+## 📞 Contact & Support
 
-Having issues? We're here to help!
+**For all inquiries regarding this proprietary software:**
 
-- 🐛 **Bug Reports**: [Open an issue](https://github.com/yourusername/weathernet/issues)
-- 💡 **Feature Requests**: [Start a discussion](https://github.com/yourusername/weathernet/discussions)
-- 📧 **Email**: support@weathernet.app
+**Ayush Singh**
+- 📧 **Email**: ayush.singh.dev@example.com
+- 🔐 **Licensing**: ayush.singh.dev@example.com
+- 🐛 **Authorized Bug Reports**: Contact via email only
+- 💡 **Feature Requests**: Authorized users only
 
 ---
 
-## 🎯 Roadmap
+## ⚠️ Legal Notice
 
-### Upcoming Features
-- [ ] **Weather Radar Maps** - Animated precipitation overlay
-- [ ] **Historical Weather Data** - Past weather trends and comparisons
-- [ ] **Weather Notifications** - Push alerts for severe weather
-- [ ] **Multi-language Support** - Internationalization
-- [ ] **Offline Mode** - Cached data for offline viewing
-- [ ] **Weather Widgets** - Embeddable components for other sites
+This software is the exclusive intellectual property of Ayush Singh. Any unauthorized use, copying, modification, distribution, or reverse engineering is strictly prohibited and will be prosecuted to the full extent of the law.
 
-### Performance Improvements
-- [ ] **Service Worker** - Background data updates
-- [ ] **Image Optimization** - WebP format with fallbacks
-- [ ] **Bundle Splitting** - Reduced initial load time
-- [ ] **CDN Integration** - Global content delivery
+**© 2025 Ayush Singh. All rights reserved.**
 
 ---
 
 <div align="center">
 
-**Built with ❤️ for weather enthusiasts**
+**WeatherNet - Proprietary Weather Network Software**
 
-*WeatherNet - Your sophisticated weather network* 🌤️
+*Developed exclusively by Ayush Singh* 🌤️
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/weathernet?style=social)](https://github.com/yourusername/weathernet)
+**All rights reserved. Unauthorized use prohibited.**
 
 </div>
