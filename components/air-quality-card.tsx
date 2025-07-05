@@ -13,11 +13,11 @@ interface AirQualityCardProps {
 }
 
 const AQI_LEVELS = {
-  1: { label: "Good", color: "bg-green-500", textColor: "text-green-700" },
-  2: { label: "Fair", color: "bg-yellow-500", textColor: "text-yellow-700" },
-  3: { label: "Moderate", color: "bg-orange-500", textColor: "text-orange-700" },
-  4: { label: "Poor", color: "bg-red-500", textColor: "text-red-700" },
-  5: { label: "Very Poor", color: "bg-purple-500", textColor: "text-purple-700" },
+  1: { label: "Good", color: "bg-gray-500", textColor: "text-gray-700" },
+  2: { label: "Fair", color: "bg-gray-600", textColor: "text-gray-700" },
+  3: { label: "Moderate", color: "bg-gray-700", textColor: "text-gray-700" },
+  4: { label: "Poor", color: "bg-gray-800", textColor: "text-gray-700" },
+  5: { label: "Very Poor", color: "bg-black", textColor: "text-gray-700" },
 }
 
 export function AirQualityCard({ airQuality, isLoading, className }: AirQualityCardProps) {
@@ -65,19 +65,19 @@ export function AirQualityCard({ airQuality, isLoading, className }: AirQualityC
         </div>
         
         <div className="grid grid-cols-2 gap-2 text-sm">
-          <div className="text-center p-2 rounded bg-white/10 backdrop-blur-sm">
+          <div className="text-center p-2 rounded bg-white/10 dark:bg-black/20 backdrop-blur-sm">
             <div className="text-white/70">PM2.5</div>
             <div className="font-semibold text-white">{components.pm2_5.toFixed(1)}</div>
           </div>
-          <div className="text-center p-2 rounded bg-white/10 backdrop-blur-sm">
+          <div className="text-center p-2 rounded bg-white/10 dark:bg-black/20 backdrop-blur-sm">
             <div className="text-white/70">PM10</div>
             <div className="font-semibold text-white">{components.pm10.toFixed(1)}</div>
           </div>
-          <div className="text-center p-2 rounded bg-white/10 backdrop-blur-sm">
+          <div className="text-center p-2 rounded bg-white/10 dark:bg-black/20 backdrop-blur-sm">
             <div className="text-white/70">O₃</div>
             <div className="font-semibold text-white">{components.o3.toFixed(1)}</div>
           </div>
-          <div className="text-center p-2 rounded bg-white/10 backdrop-blur-sm">
+          <div className="text-center p-2 rounded bg-white/10 dark:bg-black/20 backdrop-blur-sm">
             <div className="text-white/70">NO₂</div>
             <div className="font-semibold text-white">{components.no2.toFixed(1)}</div>
           </div>

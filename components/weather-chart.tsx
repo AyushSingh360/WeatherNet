@@ -32,8 +32,8 @@ export function WeatherChart({ forecast }: WeatherChartProps) {
             <AreaChart data={chartData}>
               <defs>
                 <linearGradient id="tempGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#f59e0b" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#f59e0b" stopOpacity={0.1}/>
+                  <stop offset="5%" stopColor="#ffffff" stopOpacity={0.8}/>
+                  <stop offset="95%" stopColor="#ffffff" stopOpacity={0.1}/>
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
@@ -57,7 +57,7 @@ export function WeatherChart({ forecast }: WeatherChartProps) {
               <Area
                 type="monotone"
                 dataKey="temp"
-                stroke="#f59e0b"
+                stroke="#ffffff"
                 strokeWidth={2}
                 fill="url(#tempGradient)"
               />
@@ -105,17 +105,17 @@ export function WeatherChart({ forecast }: WeatherChartProps) {
                 yAxisId="humidity"
                 type="monotone"
                 dataKey="humidity"
-                stroke="#3b82f6"
+                stroke="#ffffff"
                 strokeWidth={2}
-                dot={{ fill: '#3b82f6', strokeWidth: 2, r: 4 }}
+                dot={{ fill: '#ffffff', strokeWidth: 2, r: 4 }}
               />
               <Line
                 yAxisId="pressure"
                 type="monotone"
                 dataKey="pressure"
-                stroke="#10b981"
+                stroke="#cccccc"
                 strokeWidth={2}
-                dot={{ fill: '#10b981', strokeWidth: 2, r: 4 }}
+                dot={{ fill: '#cccccc', strokeWidth: 2, r: 4 }}
               />
             </LineChart>
           </ResponsiveContainer>

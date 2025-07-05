@@ -12,7 +12,7 @@ interface ForecastCardProps {
 
 export function ForecastCard({ forecast, className }: ForecastCardProps) {
   return (
-    <Card className={cn("backdrop-blur-md bg-white/10 dark:bg-black/20 border-white/20 shadow-xl transition-all duration-300 hover:scale-105 hover:bg-white/20", className)}>
+    <Card className={cn("backdrop-blur-md bg-white/10 dark:bg-black/20 border-white/20 shadow-xl transition-all duration-300 hover:scale-105 hover:bg-white/20 dark:hover:bg-black/30", className)}>
       <CardContent className="p-4 text-center">
         <div className="text-white/80 text-sm mb-2">
           {formatDay(forecast.dt)}
@@ -33,7 +33,7 @@ export function ForecastCard({ forecast, className }: ForecastCardProps) {
           {Math.round(forecast.main.temp_max)}° / {Math.round(forecast.main.temp_min)}°
         </div>
         {forecast.pop > 0 && (
-          <div className="text-blue-300 text-xs mt-2">
+          <div className="text-gray-300 text-xs mt-2">
             💧 {Math.round(forecast.pop * 100)}%
           </div>
         )}

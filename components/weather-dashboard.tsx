@@ -90,9 +90,9 @@ export function WeatherDashboard() {
   if (error) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
-        <Alert className="max-w-md animate-fade-in">
-          <AlertTriangle className="h-4 w-4" />
-          <AlertDescription className="text-center">
+        <Alert className="max-w-md animate-fade-in bg-white/10 dark:bg-black/20 border-white/20">
+          <AlertTriangle className="h-4 w-4 text-white" />
+          <AlertDescription className="text-center text-white">
             {error}
           </AlertDescription>
         </Alert>
@@ -113,12 +113,12 @@ export function WeatherDashboard() {
                 placeholder="Search for a city..."
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
-                className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/70 focus:bg-white/20 transition-all duration-300"
+                className="pl-10 bg-white/10 dark:bg-black/20 border-white/20 text-white placeholder:text-white/70 focus:bg-white/20 dark:focus:bg-black/30 transition-all duration-300"
               />
             </div>
             <Button 
               type="submit" 
-              className="bg-white/20 hover:bg-white/30 text-white border-white/20 transition-all duration-300 hover:scale-105"
+              className="bg-white/20 hover:bg-white/30 dark:bg-black/20 dark:hover:bg-black/30 text-white border-white/20 transition-all duration-300 hover:scale-105"
               disabled={isLoading}
             >
               {isLoading ? <LoadingSpinner size="sm" /> : <Search className="h-4 w-4" />}
@@ -126,7 +126,7 @@ export function WeatherDashboard() {
             <Button
               type="button"
               onClick={handleLocationClick}
-              className="bg-white/20 hover:bg-white/30 text-white border-white/20 transition-all duration-300 hover:scale-105"
+              className="bg-white/20 hover:bg-white/30 dark:bg-black/20 dark:hover:bg-black/30 text-white border-white/20 transition-all duration-300 hover:scale-105"
               disabled={locationLoading}
             >
               {locationLoading ? <LoadingSpinner size="sm" /> : <MapPin className="h-4 w-4" />}
@@ -149,10 +149,10 @@ export function WeatherDashboard() {
                       variant="ghost"
                       size="sm"
                       onClick={handleFavoriteToggle}
-                      className="text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                      className="text-white hover:bg-white/20 dark:hover:bg-black/30 transition-all duration-300 hover:scale-110"
                     >
                       {isFavorite(currentWeather.name) ? (
-                        <BookmarkCheck className="h-4 w-4 text-yellow-400" />
+                        <BookmarkCheck className="h-4 w-4 text-gray-400" />
                       ) : (
                         <Bookmark className="h-4 w-4" />
                       )}
@@ -184,22 +184,22 @@ export function WeatherDashboard() {
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center p-3 rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                <div className="text-center p-3 rounded-lg bg-white/10 dark:bg-black/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 dark:hover:bg-black/30 hover:scale-105">
                   <Wind className="h-5 w-5 text-white/80 mx-auto mb-1" />
                   <div className="text-sm text-white/80">Wind</div>
                   <div className="font-semibold text-white">{currentWeather.wind.speed} m/s</div>
                 </div>
-                <div className="text-center p-3 rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                <div className="text-center p-3 rounded-lg bg-white/10 dark:bg-black/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 dark:hover:bg-black/30 hover:scale-105">
                   <Droplets className="h-5 w-5 text-white/80 mx-auto mb-1" />
                   <div className="text-sm text-white/80">Humidity</div>
                   <div className="font-semibold text-white">{currentWeather.main.humidity}%</div>
                 </div>
-                <div className="text-center p-3 rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                <div className="text-center p-3 rounded-lg bg-white/10 dark:bg-black/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 dark:hover:bg-black/30 hover:scale-105">
                   <Eye className="h-5 w-5 text-white/80 mx-auto mb-1" />
                   <div className="text-sm text-white/80">Visibility</div>
                   <div className="font-semibold text-white">{(currentWeather.visibility / 1000).toFixed(1)} km</div>
                 </div>
-                <div className="text-center p-3 rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                <div className="text-center p-3 rounded-lg bg-white/10 dark:bg-black/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 dark:hover:bg-black/30 hover:scale-105">
                   <Thermometer className="h-5 w-5 text-white/80 mx-auto mb-1" />
                   <div className="text-sm text-white/80">Pressure</div>
                   <div className="font-semibold text-white">{currentWeather.main.pressure} hPa</div>
@@ -225,17 +225,17 @@ export function WeatherDashboard() {
 
       {/* Tabs Section */}
       <Tabs value={activeTab} onValueChange={setActiveTab} className="animate-slide-up delay-400">
-        <TabsList className="grid w-full grid-cols-4 bg-white/10 backdrop-blur-md border-white/20">
-          <TabsTrigger value="current" className="text-white data-[state=active]:bg-white/20 data-[state=active]:text-white transition-all duration-300">
+        <TabsList className="grid w-full grid-cols-4 bg-white/10 dark:bg-black/20 backdrop-blur-md border-white/20">
+          <TabsTrigger value="current" className="text-white data-[state=active]:bg-white/20 dark:data-[state=active]:bg-black/30 data-[state=active]:text-white transition-all duration-300">
             Current
           </TabsTrigger>
-          <TabsTrigger value="forecast" className="text-white data-[state=active]:bg-white/20 data-[state=active]:text-white transition-all duration-300">
+          <TabsTrigger value="forecast" className="text-white data-[state=active]:bg-white/20 dark:data-[state=active]:bg-black/30 data-[state=active]:text-white transition-all duration-300">
             Forecast
           </TabsTrigger>
-          <TabsTrigger value="charts" className="text-white data-[state=active]:bg-white/20 data-[state=active]:text-white transition-all duration-300">
+          <TabsTrigger value="charts" className="text-white data-[state=active]:bg-white/20 dark:data-[state=active]:bg-black/30 data-[state=active]:text-white transition-all duration-300">
             Charts
           </TabsTrigger>
-          <TabsTrigger value="favorites" className="text-white data-[state=active]:bg-white/20 data-[state=active]:text-white transition-all duration-300">
+          <TabsTrigger value="favorites" className="text-white data-[state=active]:bg-white/20 dark:data-[state=active]:bg-black/30 data-[state=active]:text-white transition-all duration-300">
             Favorites
           </TabsTrigger>
         </TabsList>
