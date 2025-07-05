@@ -20,6 +20,7 @@ import { ForecastCard } from "@/components/forecast-card"
 import { WeatherDetails } from "@/components/weather-details"
 import { FavoritesPanel } from "@/components/favorites-panel"
 import { LoadingSpinner } from "@/components/loading-spinner"
+import { Logo } from "@/components/logo"
 import { formatDate, formatTime, getWeatherIcon, getWeatherGradient } from "@/lib/utils"
 import { toast } from "@/hooks/use-toast"
 
@@ -89,7 +90,8 @@ export function WeatherDashboard() {
 
   if (error) {
     return (
-      <div className="flex items-center justify-center min-h-[400px]">
+      <div className="flex flex-col items-center justify-center min-h-[400px] space-y-4">
+        <Logo size="sm" className="opacity-50" />
         <Alert className="max-w-md animate-fade-in bg-white/10 dark:bg-black/20 border-white/20">
           <AlertTriangle className="h-4 w-4 text-white" />
           <AlertDescription className="text-center text-white">

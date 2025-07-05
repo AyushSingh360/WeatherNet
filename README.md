@@ -1,8 +1,8 @@
-# 🌤️ Vibrant Weather - Enhanced Edition
+# 🌤️ WeatherNet - Advanced Weather Network
 
-**Vibrant Weather** is a stunning, feature-rich weather dashboard built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. Experience weather like never before with beautiful animations, comprehensive data, and intelligent features.
+**WeatherNet** is a sophisticated, feature-rich weather network application built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. Experience weather data like never before with beautiful animations, comprehensive analytics, and intelligent features in a sleek black and white design.
 
-![Vibrant Weather Dashboard](https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop)
+![WeatherNet Dashboard](https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop)
 
 ---
 
@@ -21,10 +21,10 @@
 - **🗺️ Interactive Maps** - Visual location context with map integration
 
 ### 🎨 Beautiful UI/UX
-- **🌈 Stunning Animations** - Smooth transitions and micro-interactions
-- **🌙 Dark/Light Mode** - Elegant theme switching with neon effects
+- **🖤 Monochrome Design** - Elegant black and white aesthetic
+- **🌙 Dark/Light Mode** - Seamless theme switching
 - **📱 Fully Responsive** - Perfect on mobile, tablet, and desktop
-- **🎭 Glassmorphism Design** - Modern frosted glass aesthetic
+- **🎭 Glassmorphism Design** - Modern frosted glass effects
 - **⚡ Lightning Fast** - Optimized performance with smooth animations
 
 ### 📊 Advanced Analytics
@@ -66,8 +66,8 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AyushSingh360/vibrant-weather-enhanced.git
-   cd vibrant-weather-enhanced
+   git clone https://github.com/yourusername/weathernet.git
+   cd weathernet
    ```
 
 2. **Install dependencies:**
@@ -93,7 +93,7 @@
    npm run dev
    ```
    
-   Open [http://localhost:3000](http://localhost:3000) to see the magic! ✨
+   Open [http://localhost:3000](http://localhost:3000) to see WeatherNet in action! ✨
 
 ---
 
@@ -122,7 +122,7 @@
 ## 🏗️ Project Structure
 
 ```
-vibrant-weather/
+weathernet/
 ├── app/                    # Next.js App Router
 │   ├── api/               # API routes
 │   │   ├── weather/       # Current weather endpoint
@@ -133,6 +133,7 @@ vibrant-weather/
 │   └── page.tsx          # Home page
 ├── components/            # React components
 │   ├── ui/               # Reusable UI components
+│   ├── logo.tsx          # WeatherNet logo component
 │   ├── weather-dashboard.tsx  # Main dashboard
 │   ├── weather-chart.tsx     # Chart components
 │   ├── air-quality-card.tsx  # Air quality display
@@ -151,9 +152,9 @@ vibrant-weather/
 ## 🎨 Design Philosophy
 
 ### Visual Design
+- **Monochrome Aesthetic** - Sophisticated black and white color scheme
 - **Glassmorphism** - Frosted glass effects with backdrop blur
-- **Gradient Backgrounds** - Dynamic color schemes based on weather
-- **Micro-interactions** - Subtle animations that delight users
+- **Micro-interactions** - Subtle animations that enhance user experience
 - **Typography Hierarchy** - Clear information architecture
 
 ### User Experience
@@ -182,12 +183,12 @@ vibrant-weather/
 - Real-time AQI (Air Quality Index) data
 - PM2.5, PM10, O₃, NO₂ measurements
 - Health recommendations based on pollution levels
-- Color-coded quality indicators
+- Monochrome color-coded quality indicators
 
 ### 📊 Interactive Charts
 - Temperature trend visualization
 - Humidity and pressure correlations
-- Responsive chart design
+- Responsive chart design with white/gray color scheme
 - Smooth data transitions
 
 ### ⚡ Performance Optimizations
@@ -201,19 +202,19 @@ vibrant-weather/
 ## 🔧 Customization
 
 ### Themes
-Modify `app/globals.css` to customize colors and animations:
+Modify `app/globals.css` to customize the monochrome theme:
 ```css
 :root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-gradient: linear-gradient(135deg, #000000 0%, #404040 100%);
   --animation-duration: 0.6s;
 }
 ```
 
-### API Configuration
-Extend weather data by modifying API routes in `app/api/`:
-- Add new weather parameters
-- Integrate additional weather services
-- Implement caching strategies
+### Logo Customization
+The WeatherNet logo combines a cloud icon with a lightning bolt and can be customized in `components/logo.tsx`:
+- Adjust icon sizes for different breakpoints
+- Modify the color scheme
+- Change the typography
 
 ---
 
@@ -245,6 +246,7 @@ We welcome contributions! Here's how you can help:
 ### Development Guidelines
 - Follow TypeScript best practices
 - Maintain responsive design principles
+- Keep the monochrome design consistent
 - Add animations for new components
 - Update documentation for new features
 
@@ -270,9 +272,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 Having issues? We're here to help!
 
-- 🐛 **Bug Reports**: [Open an issue](https://github.com/AyushSingh360/vibrant-weather-enhanced/issues)
-- 💡 **Feature Requests**: [Start a discussion](https://github.com/AyushSingh360/vibrant-weather-enhanced/discussions)
-- 📧 **Email**: ayush.singh.dev@example.com
+- 🐛 **Bug Reports**: [Open an issue](https://github.com/yourusername/weathernet/issues)
+- 💡 **Feature Requests**: [Start a discussion](https://github.com/yourusername/weathernet/discussions)
+- 📧 **Email**: support@weathernet.app
 
 ---
 
@@ -296,11 +298,10 @@ Having issues? We're here to help!
 
 <div align="center">
 
-**Built with ❤️ by [Ayush Singh](https://github.com/AyushSingh360)**
+**Built with ❤️ for weather enthusiasts**
 
-*Making weather beautiful, one forecast at a time* 🌈
+*WeatherNet - Your sophisticated weather network* 🌤️
 
-[![GitHub stars](https://img.shields.io/github/stars/AyushSingh360/vibrant-weather-enhanced?style=social)](https://github.com/AyushSingh360/vibrant-weather-enhanced)
-[![Twitter Follow](https://img.shields.io/twitter/follow/ayushsingh360?style=social)](https://twitter.com/ayushsingh360)
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/weathernet?style=social)](https://github.com/yourusername/weathernet)
 
 </div>

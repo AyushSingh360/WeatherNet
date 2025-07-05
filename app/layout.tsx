@@ -8,8 +8,8 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Vibrant Weather",
-  description: "A vibrant weather application with neon dark mode",
+  title: "WeatherNet",
+  description: "A sophisticated weather network application with real-time data",
   generator: 'v0.dev'
 }
 
