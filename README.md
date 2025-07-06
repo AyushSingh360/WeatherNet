@@ -14,7 +14,7 @@ This is proprietary software owned exclusively by Ayush Singh. No part of this s
 
 **🚫 UNAUTHORIZED USE IS STRICTLY PROHIBITED**
 
-For licensing inquiries, contact: ayush.singh.dev@example.com
+For licensing inquiries, contact: ayushsingh21109@gmail.com
 
 ---
 
