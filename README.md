@@ -287,8 +287,8 @@ See the [LICENSE](LICENSE) file for complete terms and conditions.
 **For all inquiries regarding this proprietary software:**
 
 **Ayush Singh**
-- 📧 **Email**: ayush.singh.dev@example.com
-- 🔐 **Licensing**: ayush.singh.dev@example.com
+- 📧 **Email**: ayushsingh21109@gmail.com
+- 🔐 **Licensing**: ayushsingh21109@gmail.com
 - 🐛 **Authorized Bug Reports**: Contact via email only
 - 💡 **Feature Requests**: Authorized users only
 
