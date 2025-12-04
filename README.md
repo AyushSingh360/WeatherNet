@@ -2,7 +2,7 @@
 
 **WeatherNet** is a sophisticated, feature-rich weather network application built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. Experience weather data like never before with beautiful animations, comprehensive analytics, and intelligent features in a sleek black and white design.
 
-![WeatherNet Dashboard](https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop)
+![WeatherNet Dashboard](./output-dashboard.jpg)
 
 ---
 
@@ -52,12 +52,12 @@ For licensing inquiries, contact: ayushsingh21109@gmail.com
 ### Dashboard Overview
 Experience the sleek, modern interface with real-time weather data visualization.
 
-![WeatherNet Dashboard View 1](./weather%20outpul%201.jpeg)
+![WeatherNet Charts View](./output-charts.jpg)
 
 ### Detailed Weather Information
 Comprehensive weather metrics displayed with beautiful glassmorphism design.
 
-![WeatherNet Dashboard View 2](./Weather%20output%202.jpeg)
+![WeatherNet Dashboard View](./output-dashboard.jpg)
 
 ### 🎬 Animated UI Features
 
