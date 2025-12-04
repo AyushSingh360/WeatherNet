@@ -47,7 +47,51 @@ For licensing inquiries, contact: ayushsingh21109@gmail.com
 
 ---
 
-## 🚀 Tech Stack
+## � Output & Screenshots
+
+### Dashboard Overview
+Experience the sleek, modern interface with real-time weather data visualization.
+
+![WeatherNet Dashboard View 1](./weather%20outpul%201.jpeg)
+
+### Detailed Weather Information
+Comprehensive weather metrics displayed with beautiful glassmorphism design.
+
+![WeatherNet Dashboard View 2](./Weather%20output%202.jpeg)
+
+### 🎬 Animated UI Features
+
+WeatherNet features a stunning **Silk WebGL Background** - a mesmerizing animated shader effect that creates a flowing, silk-like visual experience:
+
+| Feature | Description |
+|---------|-------------|
+| **Silk Shader Effect** | Real-time WebGL animation using Three.js and React Three Fiber |
+| **Smooth Wave Patterns** | Procedural noise-based flowing patterns |
+| **Customizable Colors** | Adjustable color schemes via hex values |
+| **Performance Optimized** | GPU-accelerated rendering with adaptive DPR |
+| **Interactive Parameters** | Speed, scale, rotation, and noise intensity controls |
+
+#### Background Animation Props
+```typescript
+interface SilkProps {
+  speed?: number;        // Animation speed (default: 5)
+  scale?: number;        // Pattern scale (default: 1)
+  color?: string;        // Hex color (default: '#7B7481')
+  noiseIntensity?: number; // Grain overlay (default: 1.5)
+  rotation?: number;     // Pattern rotation (default: 0)
+}
+```
+
+### 🎨 UI Highlights
+
+- **Glassmorphism Cards** - Frosted glass effect with backdrop blur
+- **Smooth Transitions** - CSS and WebGL powered animations
+- **Real-time Updates** - Live weather data with animated transitions
+- **Responsive Design** - Seamless experience across all devices
+- **Dark/Light Mode** - Theme-aware animated backgrounds
+
+
+## �🚀 Tech Stack
 
 ### Frontend
 - **[Next.js 14](https://nextjs.org/)** - React framework with App Router
